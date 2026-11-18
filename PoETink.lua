@@ -183,7 +183,7 @@ local function ScanLootWindow()
     end
 end
 
--- Scan quest raw gold and item rewards when viewing quest offer or turn-in screen
+-- Scan quest raw gold and item rewards when viewing quest turn-in screen
 local function ScanQuestRewards()
     local thresholdCopper = GetThresholdCopper()
     if thresholdCopper <= 0 then return end
@@ -229,7 +229,6 @@ local frame = CreateFrame("Frame")
 frame:RegisterEvent("ADDON_LOADED")
 frame:RegisterEvent("LOOT_OPENED")
 frame:RegisterEvent("QUEST_COMPLETE")
-frame:RegisterEvent("QUEST_DETAIL")
 frame:RegisterEvent("GET_ITEM_INFO_RECEIVED")
 
 frame:SetScript("OnEvent", function(_, event, arg1, arg2)
@@ -237,7 +236,7 @@ frame:SetScript("OnEvent", function(_, event, arg1, arg2)
         InitDB()
     elseif event == "LOOT_OPENED" then
         ScanLootWindow()
-    elseif event == "QUEST_COMPLETE" or event == "QUEST_DETAIL" then
+    elseif event == "QUEST_COMPLETE" then
         ScanQuestRewards()
     elseif event == "GET_ITEM_INFO_RECEIVED" and arg2 then
         local pending = pendingItems[arg1]
