@@ -3,6 +3,7 @@
 ## Notes: Plays a Path of Exile tink sound when high-value loot drops or appears as a quest reward.
 ## Author: Mahranaka
 ## Version: 1.0.0
+## X-Curse-Project-ID: 1815149
 ## OptionalDeps: Auctionator
 ## SavedVariables: PoETinkDB
 
