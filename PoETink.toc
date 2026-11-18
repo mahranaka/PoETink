@@ -1,0 +1,9 @@
+## Interface: 16001
+## Title: PoE Tink
+## Notes: Plays a Path of Exile tink sound when high-value loot drops or appears as a quest reward.
+## Author: Mahranaka
+## Version: 1.0.0
+## OptionalDeps: Auctionator
+## SavedVariables: PoETinkDB
+
+PoETink.lua
